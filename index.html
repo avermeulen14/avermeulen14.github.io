@@ -57,12 +57,8 @@ p {
 		var request = new XMLHttpRequest();
 		request.open("POST", url);
 
-// 		request.mode = "no-cors";
-
 		request.setRequestHeader("Appian-API-Key", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I");
 		request.setRequestHeader("Content-type", "application/json");
-// 		request.setRequestHeader("Access-Control-Allow-Origin", '*');
-// 		request.setRequestHeader("Access-Control-Allow-Credentials", true);
 
 		request.onreadystatechange = function () {
 		   if (request.readyState === 4) {
@@ -77,10 +73,12 @@ p {
 
 
 	var queryString = window.location.search;
-	// console.log(queryString);
+	console.log(queryString);
 	var urlParams = new URLSearchParams(queryString);
 	var status = urlParams.get('status');
 	var event = urlParams.get('event');
+	
+	console.log(event);
 
 	document.getElementById("demo").innerHTML = urlParams.get('status');
 	
