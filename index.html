@@ -51,53 +51,53 @@ p {
 <p id="demo"></p>
 
 <script>
-// 	function callAppian() {
-//         let response = fetch(
-//           // "https://jnjscan2healthdev.appiancloud.com/suite/webapi/updateDocusign",
-//           'https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate',
-//           // 'https://jnjscan2healthdev.appiancloud.com/suite/webapi/helloWorld',
-//           {
-// 	          	method: 'POST',
-// 	          	// method: 'GET',
+	function callAppian() {
+        let response = fetch(
+          // "https://jnjscan2healthdev.appiancloud.com/suite/webapi/updateDocusign",
+          'https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate',
+          // 'https://jnjscan2healthdev.appiancloud.com/suite/webapi/helloWorld',
+          {
+	          	method: 'POST',
+	          	// method: 'GET',
 // 	          	mode: 'no-cors',
-// 	          	// credentials: 'same-origin',
-// 	          	headers: {
-// 		            'Appian-API-Key': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I',
-// 		            'Content-Type': 'application/json',
+	          	// credentials: 'same-origin',
+	          	headers: {
+		            'Appian-API-Key': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I',
+		            'Content-Type': 'application/json',
 // 		            'Access-Control-Allow-Origin' : '*', 
-// 					'Access-Control-Allow-Credentials' : true 
-// 	        	},
-// 	        	body: JSON.stringify({})
-// 	       }
-//         );
+// 			    'Access-Control-Allow-Credentials' : true 
+	        	},
+	        	body: JSON.stringify({})
+	       }
+        );
 
-//         console.log(response);
-//         return 0;
-//       }
+        console.log(response);
+        return 0;
+      }
       
- 	function callAppian() {
- 		var url = "https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate";
+//  	function callAppian() {
+//  		var url = "https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate";
 
-		var request = new XMLHttpRequest();
-		request.open("POST", url);
+// 		var request = new XMLHttpRequest();
+// 		request.open("POST", url);
 
-		request.mode = "no-cors";
+// 		request.mode = "no-cors";
 
-		request.setRequestHeader("Appian-API-Key", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I");
-		request.setRequestHeader("Content-type", "application/json");
-		request.setRequestHeader("Access-Control-Allow-Origin", '*');
-		request.setRequestHeader("Access-Control-Allow-Credentials", true);
+// 		request.setRequestHeader("Appian-API-Key", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I");
+// 		request.setRequestHeader("Content-type", "application/json");
+// 		request.setRequestHeader("Access-Control-Allow-Origin", '*');
+// 		request.setRequestHeader("Access-Control-Allow-Credentials", true);
 
-		request.onreadystatechange = function () {
-		   if (request.readyState === 4) {
-		      console.log(request.status);
-		      console.log(request.responseText);
-		   }};
+// 		request.onreadystatechange = function () {
+// 		   if (request.readyState === 4) {
+// 		      console.log(request.status);
+// 		      console.log(request.responseText);
+// 		   }};
 
-		request.send();
+// 		request.send();
 
-		return 0;
- 	}
+// 		return 0;
+//  	}
 
 
 	var queryString = window.location.search;
