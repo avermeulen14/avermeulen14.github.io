@@ -51,8 +51,8 @@ p {
 <p id="demo"></p>
 
 <script>
-	function callAppian() {
-        let response = fetch(
+	async function callAppian() {
+        let response = await fetch(
           'https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate',
           {
 	          	method: 'POST',
@@ -69,8 +69,7 @@ p {
 	       }
         );
 
-        console.log(response);
-        return 0;
+        return response.json()
      }
 
 
