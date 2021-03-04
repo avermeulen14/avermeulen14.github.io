@@ -57,12 +57,12 @@ p {
 		var request = new XMLHttpRequest();
 		request.open("POST", url);
 
-		request.mode = "no-cors";
+// 		request.mode = "no-cors";
 
 		request.setRequestHeader("Appian-API-Key", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I");
 		request.setRequestHeader("Content-type", "application/json");
-		request.setRequestHeader("Access-Control-Allow-Origin", '*');
-		request.setRequestHeader("Access-Control-Allow-Credentials", true);
+// 		request.setRequestHeader("Access-Control-Allow-Origin", '*');
+// 		request.setRequestHeader("Access-Control-Allow-Credentials", true);
 
 		request.onreadystatechange = function () {
 		   if (request.readyState === 4) {
