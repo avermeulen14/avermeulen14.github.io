@@ -70,7 +70,8 @@ p {
 		      console.log(request.responseText);
 		   }};
 
-		request.send();
+		request.send(JSON.stringify("test": "test")
+			);
 
 		return 0;
  	}
