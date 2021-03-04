@@ -53,19 +53,20 @@ p {
 <script>
 	async function callAppian() {
         let response = await fetch(
-          'https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate',
+//           'https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate',
+	'https://jnjscan2healthdev.appiancloud.com/suite/webapi/helloWorld'
           {
-	          	method: 'POST',
-	          	// method: 'GET',
+// 	          	method: 'POST',
+	          	method: 'GET',
 	          	mode: 'no-cors',
 	          	// credentials: 'same-origin',
 	          	headers: {
 		            'Appian-API-Key': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I',
 		            'Content-Type': 'application/json',
 		            'Access-Control-Allow-Origin' : '*', 
-					'Access-Control-Allow-Credentials' : true 
+			    'Access-Control-Allow-Credentials' : true 
 	        	},
-	        	body: JSON.stringify({})
+// 	        	body: JSON.stringify({})
 	       }
         );
 	console.log(response);
