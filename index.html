@@ -74,6 +74,9 @@ p {
 	var envelopeId = urlParams.get('envelope');
 
 	document.getElementById("demo").innerHTML = urlParams.get('status');
+
+	console.log(url);
+	console.log(apiKey);
 	
     callAppian(url, apiKey, event, envelopeId);
 
