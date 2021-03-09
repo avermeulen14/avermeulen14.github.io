@@ -40,15 +40,15 @@ p {
 
 <script>
 
- 	function callAppian(url, apiKey, evt, envId) {
+ 	function callAppian(redirectUrl, redirectApiKey, evt, envId) {
  		var url = url;
 
 		var request = new XMLHttpRequest();
-		request.open("POST", url);
+		request.open("POST", redirectUrl);
 
 		request.mode = "no-cors";
 
-		request.setRequestHeader("Appian-API-Key", apiKey);
+		request.setRequestHeader("Appian-API-Key", redirectApiKey);
 		request.setRequestHeader("Content-type", "application/json");
 		request.setRequestHeader("Access-Control-Allow-Origin", '*');
 		request.setRequestHeader("Access-Control-Allow-Credentials", true);
@@ -68,17 +68,20 @@ p {
 	var queryString = window.location.search;
 	// console.log(queryString);
 	var urlParams = new URLSearchParams(queryString);
-	var url = urlParams.get('url');
-	var apiKey = urlParams.get('apiKey');
+	
 	var event = urlParams.get('event');
 	var envelopeId = urlParams.get('envelope');
+	var redirectUrl = urlParams.get('url');
+	var redirectApiKey = urlParams.get('apiKey');
 
 	document.getElementById("demo").innerHTML = urlParams.get('status');
 
-	console.log(url);
-	console.log(apiKey);
+	console.log(event);
+	console.log(envelopeId);
+	console.log(redirectUrl);
+	console.log(redirectApiKey);
 	
-    callAppian(url, apiKey, event, envelopeId);
+    callAppian(redirectUrl, redirectApiKey, event, envelopeId);
 
 </script>
 
