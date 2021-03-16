@@ -7,14 +7,15 @@
 <style>
 
 
-.center {
+.left {
 	margin: auto;
-	width: 50%;
+/*	width: 50%;*/
 }
 
 .icon {
-	font-size:75px; 
-	text-align: center; 
+	padding-top: 45px;
+	font-size:110px; 
+	text-align: left; 
 	margin: auto;
 	width: 100%; 
 	color:#01b3e1
@@ -22,13 +23,13 @@
 
 h2 {
 	font-family: nunito;
-	text-align: center;
+	text-align: left;
 	font-size: 28px;
 	font-weight: bold;
 }
 p {
 	font-family: nunito;
-	text-align: center;
+	text-align: left;
 	color: #212121;
 	font-size: 20px;
 }
@@ -40,15 +41,15 @@ p {
 
 <script>
 
- 	function callAppian(redirectUrl, redirectApiKey, evt, envId) {
- 		var url = url;
+ 	function callAppian(url, apiKey, evt, envId) {
+ 		var url = "https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate";
 
 		var request = new XMLHttpRequest();
-		request.open("POST", redirectUrl);
+		request.open("POST", url);
 
 		request.mode = "no-cors";
 
-		request.setRequestHeader("Appian-API-Key", redirectApiKey);
+		request.setRequestHeader("Appian-API-Key", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I");
 		request.setRequestHeader("Content-type", "application/json");
 		request.setRequestHeader("Access-Control-Allow-Origin", '*');
 		request.setRequestHeader("Access-Control-Allow-Credentials", true);
@@ -68,27 +69,21 @@ p {
 	var queryString = window.location.search;
 	// console.log(queryString);
 	var urlParams = new URLSearchParams(queryString);
-	
+	var url = urlParams.get('url');
+	var apiKey = urlParams.get('apiKey');
 	var event = urlParams.get('event');
 	var envelopeId = urlParams.get('envelope');
-	var redirectUrl = urlParams.get('url');
-	var redirectApiKey = urlParams.get('apiKey');
 
 	document.getElementById("demo").innerHTML = urlParams.get('status');
-
-// 	console.log(event);
-// 	console.log(envelopeId);
-// 	console.log(redirectUrl);
-// 	console.log(redirectApiKey);
 	
-    	callAppian(redirectUrl, redirectApiKey, event, envelopeId);
+    callAppian(url, apiKey, event, envelopeId);
 
 </script>
 
 <!-- <div class="loader"></div> -->
 
 <i class="material-icons icon">fact_check</i>
-<div class="center">
+<div class="left">
 	<h2>Thanks for signing!</h2>
 	<p>Please click the next button to verify that your document has been received.</p>
 </div>
