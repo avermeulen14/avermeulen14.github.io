@@ -45,14 +45,14 @@ p {
 <script>
 
  	function callAppian(url, apiKey, evt, envId, caseId) {
- 		var callbackUrl = url;
+ 		var url = "https://jnjscan2healthdev.appiancloud.com/suite/webapi/statusUpdate";
 
 		var request = new XMLHttpRequest();
-		request.open("POST", callbackUrl);
+		request.open("POST", url);
 
 		request.mode = "no-cors";
 
-		request.setRequestHeader("Appian-API-Key", apiKey);
+		request.setRequestHeader("Appian-API-Key", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYTdjYzc3NS1jYjg3LTRhZDItYjNkOC01YTM4Yzg4ZmEzMGEifQ.E227-gH6WkOWf4KMmOvZecDNjWQTR1ynz7Daqu5zK-I");
 		request.setRequestHeader("Content-type", "application/json");
 		request.setRequestHeader("Access-Control-Allow-Origin", '*');
 		request.setRequestHeader("Access-Control-Allow-Credentials", true);
@@ -80,7 +80,7 @@ p {
 
 	document.getElementById("demo").innerHTML = urlParams.get('status');
 	
-    callAppian(url, apiKey, event, envelopeId, caseId); 
+    callAppian(url, apiKey, event, envelopeId, caseId);
 
 </script>
 
