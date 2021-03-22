@@ -45,10 +45,10 @@ p {
 <script>
 
  	function callAppian(url, apiKey, evt, envId, caseId) {
- 		var url = url;
+ 		var callbackUrl = url;
 
 		var request = new XMLHttpRequest();
-		request.open("POST", url);
+		request.open("POST", callbackUrl);
 
 		request.mode = "no-cors";
 
